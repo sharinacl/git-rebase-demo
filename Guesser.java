@@ -15,7 +15,7 @@ public class Guesser {
      * Task 1. Write code here for a constructor
      * which takes two int arguments and saves
      * them in the instance variables low and high.
-     
+     * 
      */
 
     // Write the constructor below this line.
@@ -34,8 +34,6 @@ public class Guesser {
         doGuesses();
     }
 
-    
-
     private void rules() {
         System.out.println("Think of a number between " +
                 low + " and " + high);
@@ -48,14 +46,17 @@ public class Guesser {
      * Task 3. Complete the code for the getReply() method.
      * In the current version below, it returns null each
      * call, which is not what this method is supposed to do.
-     
+     * 
      */
     private String getReply() {
-        String reply = null;
-        // Write code here which reads a String from the console.
-        // As long as it is not a valid reply (one of "T" and "F")
-        // write an error message, and read a new reply.
-        // When you have gotten a valid reply, return it.
+        System.out.println("Please enter 'T' for true and 'F' for false");
+        String reply = System.console().readLine();
+
+        while (!reply.equalsIgnoreCase("T") && !reply.equalsIgnoreCase("F")) {
+            System.out.println("Invalid input. Type only 'T' or 'F'.");
+            reply = System.console().readLine();
+        }
+
         return reply;
     }
 
