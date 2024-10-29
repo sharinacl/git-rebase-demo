@@ -19,7 +19,10 @@ public class Guesser {
      */
 
     // Write the constructor below this line.
-    
+    public Guesser(int low, int high) {
+        this.low = low;
+        this.high = high;
+    }
 
     /*
      * Task 2. Complete the start() method, so that
@@ -31,10 +34,7 @@ public class Guesser {
         // call the doGuesses() method here
     }
 
-    public Guesser(int low, int high) {
-        this.low = low;
-        this.high = high;
-    }
+    
 
     private void rules() {
         System.out.println("Think of a number between " +
